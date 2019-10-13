@@ -1,0 +1,11 @@
+
+Converter/obj/*
+Converter/bin/*
+Currency2StringConverter/obj/*
+Currency2StringConverter/bin/*
+Currency2StringConverterServer/bin/*
+Currency2StringConverterServer/obj/*
+UnitTestProject/bin/*
+UnitTestProject/obj/*
+packages/MS*
+.vs/*

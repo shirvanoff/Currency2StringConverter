@@ -27,7 +27,7 @@ namespace Converter
         public Result Convert(string text2Convert)
         {
             if (!text2Convert.IsDecimalNumber())
-                return new Error($"Text {text2Convert} is not a number or you may use wrong Decimal Separator(should be {Properties.Resources.DecimalSeperator})");
+                return new Error(string.Format(Properties.Resources.ErrorTextTemplate, text2Convert, Properties.Resources.DecimalSeperator));
             return new Success(ConvertToText(text2Convert));
         }
 
@@ -45,6 +45,7 @@ namespace Converter
                 {
                     blockLength += startIndex;
                     startIndex = 0;
+                    if (blockLength == 0) break;
                 }
                 var num = parts[0].Substring(startIndex, blockLength);
 

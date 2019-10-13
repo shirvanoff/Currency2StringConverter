@@ -120,4 +120,7 @@
   <data name="DecimalSeperator" xml:space="preserve">
     <value>,</value>
   </data>
+  <data name="ErrorTextTemplate" xml:space="preserve">
+    <value>Text {0} is not a number or you may use wrong Decimal Separator(should be {1})</value>
+  </data>
 </root>

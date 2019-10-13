@@ -40,6 +40,7 @@ namespace Converter.Test
         [DataRow("81", "eighty-one")]
         [DataRow("30", "thirty")]
         [DataRow("45 100", "forty-five thousand one hundred")]
+        [DataRow("999 999 999", "nine hundred ninety-nine million nine hundred ninety-nine thousand nine hundred ninety-nine")]
         public void ConvertDigitsToTextSuccessTest(string value, string expected)
         {
             NumericConverter converter = new NumericConverter(value);

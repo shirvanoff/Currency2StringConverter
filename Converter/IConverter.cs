@@ -2,8 +2,8 @@
 {
     public interface IConverter
     {
-        string Convert();
+        Result Convert();
 
-        string Convert(string text2Convert);
+        Result Convert(string text2Convert);
     }
 }

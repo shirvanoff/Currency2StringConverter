@@ -49,6 +49,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Currency2StringConverterServer\ConverterServiceTests.cs" />
     <Compile Include="Converter\TestNumericConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Converter\StringExtentionsTests.cs" />
@@ -60,6 +61,10 @@
     <ProjectReference Include="..\Converter\Converter.csproj">
       <Project>{23c377c0-f54e-49c7-af41-dcb10aa2fa6d}</Project>
       <Name>Converter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Currency2StringConverterServer\Currency2StringConverterServer.csproj">
+      <Project>{EE291ADD-ADC2-4985-BC07-E57FA28F2780}</Project>
+      <Name>Currency2StringConverterServer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

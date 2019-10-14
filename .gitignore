@@ -9,3 +9,4 @@ UnitTestProject/bin/*
 UnitTestProject/obj/*
 packages/MS*
 .vs/*
+/packages

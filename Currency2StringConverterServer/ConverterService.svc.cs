@@ -18,19 +18,33 @@ namespace Currency2StringConverterServer
 
         public string ConvertString(string value)
         {
-            var temp = value.Replace(" ", "");
-            if (!CheckText(temp))
-                return string.Format(Converter.Properties.Resources.ErrorTextTemplate, value, Converter.Properties.Resources.DecimalSeperator);
-            var converter = new NumericConverter { AddCurrency = true };
-            var result = converter.Convert(temp);
-            switch (result)
+            Logger.Log.Debug($"Entered into ConvertString({value})");
+            try
             {
-                case Success success:
-                    return Convert.ToString(success.Value);
-                case Error error:
-                    return error.ErrorMessage;
-                default:
-                    return $"Something wrong with {value}";
+                var temp = value.Replace(" ", "");
+                if (!CheckText(temp))
+                    return string.Format(Converter.Properties.Resources.ErrorTextTemplate, value, Converter.Properties.Resources.DecimalSeperator);
+                var converter = new NumericConverter { AddCurrency = true };
+                var result = converter.Convert(temp);
+                switch (result)
+                {
+                    case Success success:
+                        return Convert.ToString(success.Value);
+                    case Error error:
+                        return error.ErrorMessage;
+                    default:
+                        return $"Something wrong with {value}";
+                }
+            }
+            catch (Exception ex)
+            {
+                var msg = $"Error with ConvertString({value})";
+                Logger.Log.Error(ex, msg);
+                return msg;
+            }
+            finally
+            {
+                Logger.Log.Debug($"Finished ConvertString({value})");
             }
         }
 

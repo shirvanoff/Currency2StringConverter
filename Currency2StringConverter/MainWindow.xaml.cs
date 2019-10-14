@@ -1,17 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using Currency2StringConverter.ViewModels;
 
 namespace Currency2StringConverter
 {
@@ -20,9 +9,26 @@ namespace Currency2StringConverter
     /// </summary>
     public partial class MainWindow : Window
     {
+        ViewModelBase viewModel;
         public MainWindow()
         {
             InitializeComponent();
+            viewModel = new MainViewModel();
+
+            DataContext = viewModel;
+        }
+
+        protected override void OnClosed(EventArgs e)
+        {
+            try
+            {
+                viewModel?.Dispose();
+            }
+            catch (Exception ex)
+            {
+                // Here should be logging of the exception
+            }
+            base.OnClosed(e);
         }
     }
 }

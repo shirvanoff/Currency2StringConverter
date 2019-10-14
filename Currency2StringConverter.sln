@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Currency2StringConverter", "Currency2StringConverter\Currency2StringConverter.csproj", "{BA09D98F-C09F-43B5-B8C9-C7969226DF77}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EE291ADD-ADC2-4985-BC07-E57FA28F2780} = {EE291ADD-ADC2-4985-BC07-E57FA28F2780}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Currency2StringConverterServer", "Currency2StringConverterServer\Currency2StringConverterServer.csproj", "{EE291ADD-ADC2-4985-BC07-E57FA28F2780}"
 EndProject

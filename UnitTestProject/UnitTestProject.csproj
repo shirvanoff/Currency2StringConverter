@@ -53,6 +53,7 @@
     <Compile Include="Converter\TestNumericConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Converter\StringExtentionsTests.cs" />
+    <Compile Include="ViewModels\MainViewModelTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -66,7 +67,12 @@
       <Project>{EE291ADD-ADC2-4985-BC07-E57FA28F2780}</Project>
       <Name>Currency2StringConverterServer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Currency2StringConverter\Currency2StringConverter.csproj">
+      <Project>{BA09D98F-C09F-43B5-B8C9-C7969226DF77}</Project>
+      <Name>Currency2StringConverter</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

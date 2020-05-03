@@ -22,7 +22,7 @@ namespace Currency2StringConverter.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace Currency2StringConverter.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Currency2StringConverter.Properties.Resources", typeof(Resources).Assembly);
@@ -51,7 +51,7 @@ namespace Currency2StringConverter.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace Currency2StringConverter.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Connected.
         /// </summary>
-        internal static string ConnectedText {
+        public static string ConnectedText {
             get {
                 return ResourceManager.GetString("ConnectedText", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace Currency2StringConverter.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Here will be shown result of the conversion.
         /// </summary>
-        internal static string DefaultConvertionResultText {
+        public static string DefaultConvertionResultText {
             get {
                 return ResourceManager.GetString("DefaultConvertionResultText", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace Currency2StringConverter.Properties {
         /// <summary>
         ///   Looks up a localized string similar to Disconnected.
         /// </summary>
-        internal static string DisconnectedText {
+        public static string DisconnectedText {
             get {
                 return ResourceManager.GetString("DisconnectedText", resourceCulture);
             }
@@ -93,7 +93,7 @@ namespace Currency2StringConverter.Properties {
         ///- The maximum number of cents is 99.
         ///- The separator between dollars and cents is &apos;,&apos; (comma)..
         /// </summary>
-        internal static string InfoText {
+        public static string InfoText {
             get {
                 return ResourceManager.GetString("InfoText", resourceCulture);
             }

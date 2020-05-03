@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:resx="clr-namespace:Currency2StringConverter.Properties"
         xmlns:local="clr-namespace:Currency2StringConverter"
         mc:Ignorable="d"
         Title="Currency to Text Convertor" Height="450" Width="800">
@@ -29,19 +30,18 @@
                 <ColumnDefinition Width="17*"></ColumnDefinition>
                 <ColumnDefinition Width="5*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <TextBlock x:Name="descBlock" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+            <TextBlock x:Name="descBlock" 
+                       Grid.ColumnSpan="2"
+                       VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
                        TextAlignment="Left" TextOptions.TextFormattingMode="Display" 
-                       TextWrapping="Wrap" Margin="10,0,0,0" FontSize="16"
-                       Grid.ColumnSpan="2">
-                <Run Text="The program converts currency (dollars) from numbers into word presentation."/>
-                <LineBreak/>
-                <Run Text=" - The maximum number is 999 999 999." />
-                <LineBreak/>
-                <Run Text=" - The maximum number of cents is 99."/>
-                <LineBreak/>
-                <Run Text=" - The separator between dollars and cents is ',' (comma)."/>
-            </TextBlock>
-            <TextBox x:Name="inputBox" Margin="10,5,5,5" Text="" Grid.Row="1" Grid.Column="0" 
+                       TextWrapping="Wrap" 
+                       Margin="10,0,0,0" 
+                       FontSize="16"
+                       Text="{x:Static resx:Resources.InfoText}"
+                       />
+            <TextBox x:Name="inputBox" 
+                     Grid.Row="1" Grid.Column="0" 
+                     Margin="10,5,5,5" Text="" 
                      MaxLines="1" 
                      VerticalAlignment="Center" 
                      FontSize="18"/>

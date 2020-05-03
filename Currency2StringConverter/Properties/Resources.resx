@@ -126,4 +126,10 @@
   <data name="DisconnectedText" xml:space="preserve">
     <value>Disconnected</value>
   </data>
+  <data name="InfoText" xml:space="preserve">
+    <value>The program converts currency (dollars) from numbers into word presentation.
+- The maximum number is 999 999 999.
+- The maximum number of cents is 99.
+- The separator between dollars and cents is ',' (comma).</value>
+  </data>
 </root>

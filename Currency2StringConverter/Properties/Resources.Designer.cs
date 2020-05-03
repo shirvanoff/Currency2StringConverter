@@ -86,5 +86,17 @@ namespace Currency2StringConverter.Properties {
                 return ResourceManager.GetString("DisconnectedText", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The program converts currency (dollars) from numbers into word presentation.
+        ///- The maximum number is 999 999 999.
+        ///- The maximum number of cents is 99.
+        ///- The separator between dollars and cents is &apos;,&apos; (comma)..
+        /// </summary>
+        internal static string InfoText {
+            get {
+                return ResourceManager.GetString("InfoText", resourceCulture);
+            }
+        }
     }
 }
